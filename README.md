@@ -120,7 +120,7 @@ open up you local host and port
 ### STEP 01- Clone the repository
 
 ```bash
-! git clone https://github.com/krishnaik06/Text-Summarization-NLP-Project.git
+! git clone https://github.com/Demogorgon24242/Text-SummarizationMLops.git
 ```
 ### STEP 02- install the requirements
 ```bash
