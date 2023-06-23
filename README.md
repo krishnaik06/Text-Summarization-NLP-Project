@@ -38,12 +38,6 @@ open up you local host and port
 ```
 
 
-```bash
-Author: Krish Naik
-Data Scientist
-Email: krishnaik06@gmail.com
-
-```
 
 
 
@@ -140,6 +134,7 @@ os.chdir('/content/Text-Summarization-NLP-Project/')
 !pip freeze > requirements.txt
 !pip install .
 !pip install fastapi nest-asyncio pyngrok uvicorn
+! ngrok authtoken (Your token you get after registration on ngrok website)
 ```
 P.S. Here its a bit tedious, since I couldn't figure it out yet, it is required for all libraries in requirements.txt to be installed separately for each runtime. Hopefully I will try and fix it soon
 
@@ -150,4 +145,12 @@ P.S. Here its a bit tedious, since I couldn't figure it out yet, it is required 
 Now,
 ```bash
 open up your displayed public url 
+```
+
+```bash
+Original Author: Krish Naik
+Data Scientist
+Email: krishnaik06@gmail.com
+
+Edits by : Demogorgon_24242
 ```
