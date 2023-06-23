@@ -129,3 +129,35 @@ Email: krishnaik06@gmail.com
     AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
     ECR_REPOSITORY_NAME = simple-app
+
+# How to run and train model in google  colab for shorter run-time?
+### STEPS:
+
+Clone the repository
+
+```bash
+https://github.com/entbappy/End-to-end-Text-Summarization
+```
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+! git clone https://github.com/krishnaik06/Text-Summarization-NLP-Project.git
+```
+### STEP 02- install the requirements
+```bash
+import os
+os.chdir('/content/Text-Summarization-NLP-Project/')
+!pip freeze > requirements.txt
+!pip install .
+!pip install fastapi nest-asyncio pyngrok uvicorn
+```
+P.S. Here its a bit tedious, since I couldn't figure it out yet, it is required for all libraries in requirements.txt to be installed separately for each runtime. Hopefully I will try and fix it soon
+
+# Finally run the following command
+```bash
+! python3 app.py
+```
+Now,
+```bash
+open up your displayed public url 
+```
