@@ -117,12 +117,7 @@ open up you local host and port
 # How to run and train model in google  colab for shorter run-time?
 ### STEPS:
 
-Clone the repository
-
-```bash
-https://github.com/entbappy/End-to-end-Text-Summarization
-```
-### STEP 01- Create a conda environment after opening the repository
+### STEP 01- Clone the repository
 
 ```bash
 ! git clone https://github.com/krishnaik06/Text-Summarization-NLP-Project.git
