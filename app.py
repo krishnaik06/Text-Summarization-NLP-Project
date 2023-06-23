@@ -6,12 +6,21 @@ from fastapi.templating import Jinja2Templates
 from starlette.responses import RedirectResponse
 from fastapi.responses import Response
 from textSummarizer.pipeline.prediction import PredictionPipeline
-
-
+import nest_asyncio
+from pyngrok import ngrok
+import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 text:str = "What is Text Summarization?"
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 @app.get("/", tags=["authentication"])
 async def index():
     return RedirectResponse(url="/docs")
@@ -42,4 +51,7 @@ async def predict_route(text):
     
 
 if __name__=="__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    ngrok_tunnel = ngrok.connect(3000)
+    print('Public URL:', ngrok_tunnel.public_url)
+    nest_asyncio.apply()
+    uvicorn.run(app, port=3000)

@@ -15,21 +15,11 @@
 # How to run?
 ### STEPS:
 
-Clone the repository
+### STEP 01- Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Text-Summarization
+!git clone https://github.com/entbappy/End-to-end-Text-Summarization
 ```
-### STEP 01- Create a conda environment after opening the repository
-
-```bash
-conda create -n summary python=3.8 -y
-```
-
-```bash
-conda activate summary
-```
-
 
 ### STEP 02- install the requirements
 ```bash
@@ -48,12 +38,6 @@ open up you local host and port
 ```
 
 
-```bash
-Author: Krish Naik
-Data Scientist
-Email: krishnaik06@gmail.com
-
-```
 
 
 
@@ -129,3 +113,39 @@ Email: krishnaik06@gmail.com
     AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
     ECR_REPOSITORY_NAME = simple-app
+
+# How to run and train model in google  colab for shorter run-time?
+### STEPS:
+
+### STEP 01- Clone the repository
+
+```bash
+! git clone https://github.com/Demogorgon24242/Text-SummarizationMLops.git
+```
+### STEP 02- install the requirements
+```bash
+import os
+os.chdir('/content/Text-Summarization-NLP-Project/')
+!pip freeze > requirements.txt
+!pip install .
+!pip install fastapi nest-asyncio pyngrok uvicorn
+! ngrok authtoken (Your token you get after registration on ngrok website)
+```
+P.S. Here its a bit tedious, since I couldn't figure it out yet, it is required for all libraries in requirements.txt to be installed separately for each runtime. Hopefully I will try and fix it soon
+
+# Finally run the following command
+```bash
+! python3 app.py
+```
+Now,
+```bash
+open up your displayed public url 
+```
+
+```bash
+Original Author: Krish Naik
+Data Scientist
+Email: krishnaik06@gmail.com
+
+Edits by : Demogorgon_24242
+```
